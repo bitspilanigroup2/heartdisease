@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
-from pathlib import Path
 import configparser
 import os
 import pandas as pd
-
 
 
 def make_datasets():
@@ -12,6 +10,13 @@ def make_datasets():
     """
     config = configparser.ConfigParser()
     config.read(os.getcwd() + '/tox.ini')
-    data = pd.read_csv(config['data']['train-dataset-path'])
-    print(data.head())
-    print(data.shape)
+    df = pd.read_csv(config['data']['train-dataset-path'])
+    data = dict()
+    input_columns = ['male', 'age', 'education', 'currentSmoker', 'cigsPerDay', 'BPMeds',
+       'prevalentStroke', 'prevalentHyp', 'diabetes', 'totChol', 'sysBP',
+       'diaBP', 'BMI', 'heartRate', 'glucose']
+    input_columns = ['age','currentSmoker']
+    output_column = 'TenYearCHD'
+    data['X'] = df[input_columns]
+    data['Y'] = df[output_column]
+    return data

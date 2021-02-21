@@ -1,15 +1,16 @@
-import src.models.train_model as train
+from src.models.train_model import Train
 
 class HeartDisease:
 
     def __init__(self):
-        """[summary]
+        """[Class Initialization]
         """
 
     def trainModel(self):
-        """[summary]
+        """[to train the model]
         """
-        train.trainModel(self)
+        train = Train()
+        train.trainModel()
 
 if __name__ == '__main__':
     print('Starting Heart Disease Model Training')
