@@ -15,7 +15,7 @@ class LogisticRegressionModel:
         self.save_path = config['data']['save-model'] + 'LogisticRegression.pkl'
 
     def build(self, data):
-        lr= LogisticRegression()
+        lr= LogisticRegression(max_iter=1000)
         lr.fit(data['X'], data['Y'])
         with open(self.save_path, 'wb') as f:
             pickle.dump(lr, f)
