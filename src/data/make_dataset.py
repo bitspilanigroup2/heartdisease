@@ -18,6 +18,7 @@ def make_datasets():
     input_columns = ['male', 'age', 'education', 'currentSmoker', 'cigsPerDay', 'BPMeds',
        'prevalentStroke', 'prevalentHyp', 'diabetes', 'totChol', 'sysBP',
        'diaBP', 'BMI', 'heartRate', 'glucose']
+    # have to include all columns, for now adding few columns
     input_columns = ['male','age', 'education', 'currentSmoker']
     output_column = 'TenYearCHD'
     data['X'] = df[input_columns]
