@@ -18,7 +18,7 @@ def make_datasets():
     input_columns = ['male', 'age', 'education', 'currentSmoker', 'cigsPerDay', 'BPMeds',
        'prevalentStroke', 'prevalentHyp', 'diabetes', 'totChol', 'sysBP',
        'diaBP', 'BMI', 'heartRate', 'glucose']
-    input_columns = ['age', 'education', 'currentSmoker']
+    input_columns = ['male','age', 'education', 'currentSmoker']
     output_column = 'TenYearCHD'
     data['X'] = df[input_columns]
     data['Y'] = df[output_column]
