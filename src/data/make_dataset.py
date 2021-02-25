@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 import configparser
 import os
-import pandas as pd
+
 import numpy as np
+import pandas as pd
 from sklearn.impute import SimpleImputer
+
 
 def imputeByMean(data, nonNumeric):
     imputedMean = SimpleImputer(strategy='mean') # for median imputation replace 'mean' with 'median'

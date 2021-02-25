@@ -1,8 +1,8 @@
-from sklearn.linear_model import LogisticRegression
-import pickle
 import configparser
 import os
+import pickle
 
+from sklearn.linear_model import LogisticRegression
 
 
 class LogisticRegressionModel:

@@ -1,4 +1,5 @@
 from src.models.train_model import Train
+from src.models.predict_model import Predict
 
 class HeartDisease:
 
@@ -12,8 +13,13 @@ class HeartDisease:
         train = Train()
         train.trainModel()
 
+    def predictModel(self):
+        """[to train the model]
+        """
+        predict = Predict()
+        predict.predictModel()
+
 if __name__ == '__main__':
-    print('Starting Heart Disease Model Training')
     heartdisease = HeartDisease()
-    heartdisease.trainModel()
-    print('Ending Heart Disease Model Training')
+    # heartdisease.trainModel()
+    heartdisease.predictModel()
