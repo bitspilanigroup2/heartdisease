@@ -14,7 +14,6 @@ class Encode:
         """[summary]
         """
         education = pd.get_dummies(df['education'], prefix = "cp")
-        # prevalentStroke = pd.get_dummies(df['prevalentStroke'], prefix = "sp")
         frames = [df, education]
         df = pd.concat(frames, axis = 1)
         df = df.drop(columns = ['education'])
