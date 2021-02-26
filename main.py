@@ -1,5 +1,8 @@
-from src.models.train_model import Train
+import fire
+
 from src.models.predict_model import Predict
+from src.models.train_model import Train
+
 
 class HeartDisease:
 
@@ -8,18 +11,18 @@ class HeartDisease:
         """
 
     def trainModel(self):
-        """[to train the model]
+        """[to train the model which includes multiple algorithms like Logistic Regression, SVM]
         """
         train = Train()
         train.trainModel()
 
     def predictModel(self):
-        """[to train the model]
+        """[to predict the model]
         """
         predict = Predict()
         predict.predictModel()
 
+
 if __name__ == '__main__':
     heartdisease = HeartDisease()
-    # heartdisease.trainModel()
-    heartdisease.predictModel()
+    fire.Fire(heartdisease)
