@@ -20,14 +20,13 @@ def imputeByMean(data, nonNumeric):
     return finalImputedData
 
 
-def make_datasets():
+def make_datasets(mode):
     """ Runs data processing scripts to turn raw data from (../raw) into
         cleaned data ready to be analyzed (saved in ../processed).
     """
     config = configparser.ConfigParser()
     config.read(os.getcwd() + '/tox.ini')
-    df = pd.read_csv(config['data']['train-dataset-path'])
-    # print(df.head(3))
+    df = pd.read_csv(config['data'][mode])
     cols = df.columns
     num_cols = df._get_numeric_data().columns
     nonNumeric = list(set(cols) - set(num_cols))

@@ -14,7 +14,7 @@ class Train:
     def trainModel(self):
         """[to train the model]
         """
-        df = data.make_datasets()
+        df = data.make_datasets('train-dataset-path')
         encode = Encode()
         df['X'] = encode.encodeColumns(df['X'])
         model = LogisticRegressionModel()
