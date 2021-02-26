@@ -23,11 +23,11 @@ BITS Pilani Capstone Project - Group 2
 
 Local Execution
 ------------
-Change the dataset path in tox.ini
-Model Training
-  python3 main.py trainModel
-Model Prediction
-  streamlit run main.py predictModel
+Change the dataset path in tox.ini  
+Model Training  
+  python3 main.py trainModel  
+Model Prediction  
+  streamlit run main.py predictModel  
 
 
 Project Organization
