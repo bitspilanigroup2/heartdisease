@@ -25,6 +25,8 @@ Local Execution
 ------------
 Change the dataset path in tox.ini  
 
+pip install -r requirements.txt
+
 Model Training  
 &nbsp;&nbsp;&nbsp;&nbsp;python3 main.py trainModel  
 
