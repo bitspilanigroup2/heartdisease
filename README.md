@@ -26,7 +26,7 @@ Local Execution
 Change the dataset path in tox.ini  
 
 Model Training  
-&nbsp;&nbsp;python3 main.py trainModel
+&nbsp;&nbsp;python3 main.py trainModel  
 Model Prediction  
 &nbsp;&nbsp;streamlit run main.py predictModel  
 
