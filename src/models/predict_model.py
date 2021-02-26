@@ -1,5 +1,3 @@
-import configparser
-import os
 import pickle
 
 import src.data.make_dataset as data
@@ -9,6 +7,7 @@ from sklearn.metrics import (plot_confusion_matrix,
                              plot_precision_recall_curve, plot_roc_curve,
                              precision_score, recall_score)
 from src.features.build_features import Encode
+from src.shared.config import loadConfig
 from streamlit_pandas_profiling import st_profile_report
 
 from .algo.logistic_regression import LogisticRegressionModel
@@ -22,8 +21,7 @@ class Predict:
     def __init__(self):
         """[summary]
         """
-        self.config = configparser.ConfigParser()
-        self.config.read(os.getcwd() + '/tox.ini')
+        self.config = loadConfig()
         st.title(self.config['contents']['heading'])
         st.sidebar.title(self.config['contents']['heading'])
         st.markdown(self.config['contents']['sub-heading'])
@@ -67,7 +65,7 @@ class Predict:
             st.subheader(self.config['contents']['sub-heading2'])
             st.write(self.df['X'])
             st.markdown(self.config['contents']['dataset-desc'])
-        
+
         if st.sidebar.checkbox("Profile data", False):
             pr = ProfileReport(self.df['X'], explorative=False)
             st.title("Pandas Profiling in Streamlit")

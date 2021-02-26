@@ -21,6 +21,15 @@ BITS Pilani Capstone Project - Group 2
   </a> &nbsp; 
 </p>
 
+Local Execution
+------------
+Change the dataset path in tox.ini
+Model Training
+  python3 main.py trainModel
+Model Prediction
+  streamlit run main.py predictModel
+
+
 Project Organization
 ------------
 
@@ -35,6 +44,10 @@ Project Organization
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     │
+    ├── Dockerfile         <- Model Containerization
+    |
+    ├── k8s                <- Kubernetes supporting files
+    |
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
     ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),

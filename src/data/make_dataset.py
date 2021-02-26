@@ -1,9 +1,7 @@
-import configparser
-import os
-
 import numpy as np
 import pandas as pd
 from sklearn.impute import SimpleImputer
+from src.shared.config import loadConfig
 
 
 def imputeByMean(data, nonNumeric):
@@ -24,8 +22,7 @@ def make_datasets(mode):
     """ Runs data processing scripts to turn raw data from (../raw) into
         cleaned data ready to be analyzed (saved in ../processed).
     """
-    config = configparser.ConfigParser()
-    config.read(os.getcwd() + '/tox.ini')
+    config = loadConfig()
     df = pd.read_csv(config['data'][mode])
     cols = df.columns
     num_cols = df._get_numeric_data().columns
