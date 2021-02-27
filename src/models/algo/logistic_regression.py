@@ -16,7 +16,7 @@ class LogisticRegressionModel:
             'LogisticRegression.pkl'
 
     def build(self, data):
-        lr = LogisticRegression(max_iter=10000)
+        lr = LogisticRegression(max_iter=10000000)
         lr.fit(data['X'], data['Y'])
         with open(self.save_path, 'wb') as f:
             pickle.dump(lr, f)

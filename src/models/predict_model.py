@@ -2,16 +2,18 @@ import pickle
 
 import src.data.make_dataset as data
 import streamlit as st
-from pandas_profiling import ProfileReport
+# from pandas_profiling import ProfileReport
 from sklearn.metrics import (plot_confusion_matrix,
                              plot_precision_recall_curve, plot_roc_curve,
                              precision_score, recall_score)
 from src.features.build_features import Encode
 from src.shared.config import loadConfig
-from streamlit_pandas_profiling import st_profile_report
 
 from .algo.logistic_regression import LogisticRegressionModel
 from .algo.svm import SupportVectorMachineModel
+
+# from streamlit_pandas_profiling import st_profile_report
+
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
