@@ -1,7 +1,7 @@
 Heart Disease Prediction
 ==============================
 
-BITS Pilani Capstone Project - Group 2
+BITS Pilani Capstone Project - Group 2  - Version Dhanya
 
 <p>
   <a href="https://www.linkedin.com/in/nithin-rajan/" target="_blank">
