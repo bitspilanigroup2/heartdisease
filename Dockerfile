@@ -19,11 +19,16 @@ EXPOSE 8501
 # command to run on container start
 CMD streamlit run main.py predictModel
 
-# Execute the following to containerize the model
-# docker build -t heartdisease .
+# Steps - execute the following to containerize the model
+
+# To build the docker image
 # docker build -t heartdisease:latest .
+
+# To run the prediction app from docker image
 # docker run -p 8501:8501 heartdisease:latest
-# sudo docker run -it heartdisease bash
+
+# To debug the docker image - optional
+# docker run -it heartdisease bash
 
 # To delete all containers including its volumes and images
 # docker rm -vf $(docker ps -a -q)

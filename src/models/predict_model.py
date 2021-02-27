@@ -66,11 +66,11 @@ class Predict:
             st.write(self.df['X'])
             st.markdown(self.config['contents']['dataset-desc'])
 
-        if st.sidebar.checkbox("Profile data", False):
-            pr = ProfileReport(self.df['X'], explorative=False)
-            st.title("Pandas Profiling in Streamlit")
-            st.write(self.df['X'])
-            st_profile_report(pr)
+        # if st.sidebar.checkbox("Profile data", False):
+        #     pr = ProfileReport(self.df['X'], explorative=False)
+        #     st.title("Pandas Profiling in Streamlit")
+        #     st.write(self.df['X'])
+        #     st_profile_report(pr)
 
         st.sidebar.subheader("Choose Classifier")
         classifier = st.sidebar.selectbox(
