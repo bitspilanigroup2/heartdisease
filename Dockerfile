@@ -7,11 +7,11 @@ WORKDIR /
 # copy the dependencies file to the working directory
 COPY requirements.txt /
 
-# copy the content of the local src directory to the working directory
-COPY . /
-
 # install dependencies
 RUN pip install -r requirements.txt
+
+# copy the content of the local src directory to the working directory
+COPY . /
 
 # Expose the prediction app through port 8501
 EXPOSE 8501
@@ -24,6 +24,13 @@ CMD streamlit run main.py predictModel
 # To build the docker image
 # docker build -t heartdisease:latest .
 
+# to list the container
+# docker container ls
+
+# stop the existing heart disease container
+# docker stop aceb2e971885
+# docker rm -f aceb2e971885
+
 # To run the prediction app from docker image
 # docker run -p 8501:8501 heartdisease:latest
 
@@ -31,6 +38,7 @@ CMD streamlit run main.py predictModel
 # docker run -it heartdisease bash
 
 # To delete all containers including its volumes and images
+# docker system prune -a
 # docker rm -vf $(docker ps -a -q)
 # docker rmi -f $(docker images -a -q)
 
