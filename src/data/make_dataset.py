@@ -23,6 +23,7 @@ def make_datasets(mode):
         cleaned data ready to be analyzed (saved in ../processed).
     """
     config = loadConfig()
+    #config['data'][mode]
     df = pd.read_csv(config['data'][mode])
     cols = df.columns
     num_cols = df._get_numeric_data().columns
