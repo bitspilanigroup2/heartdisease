@@ -1,5 +1,5 @@
 import pickle
-
+import os
 import src.data.make_dataset as data
 import streamlit as st
 from sklearn.metrics import (plot_confusion_matrix,
@@ -20,7 +20,6 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def Predict():
     config = loadConfig()
-    st.title(config['contents']['heading'])
     st.sidebar.title(config['contents']['heading'])
     st.markdown(config['contents']['sub-heading'])
     class_names = ['Negative', 'Positive']
@@ -78,7 +77,7 @@ def Predict():
         if st.sidebar.button("Classify", key='classify'):
             st.subheader("Logistic Regression Results")
             model = pickle.load(
-                open(config['data']['save-model'] + '/LogisticRegression.pkl', 'rb'))
+                open(os.getcwd() + config['data']['save-model'] + '/LogisticRegression.pkl', 'rb'))
             accuracy = model.score(df['X'], df['Y'])
             y_pred = model.predict(df['X'])
             st.write("Accuracy: ", accuracy.round(roundOff))
@@ -95,7 +94,7 @@ def Predict():
         if st.sidebar.button("Classify", key='classify'):
             st.subheader("Support Vector Machine Results")
             model = pickle.load(
-                open(config['data']['save-model'] + '/SupportVectorMachine.pkl', 'rb'))
+                open(os.getcwd() + config['data']['save-model'] + '/SupportVectorMachine.pkl', 'rb'))
             accuracy = model.score(df['X'], df['Y'])
             y_pred = model.predict(df['X'])
             st.write("Accuracy: ", accuracy.round(roundOff))
