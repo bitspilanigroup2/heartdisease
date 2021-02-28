@@ -1,6 +1,6 @@
 import fire
 
-from src.models.predict_model import Predict
+import src.models.predict_model as predictor
 from src.models.train_model import Train
 
 
@@ -19,8 +19,7 @@ class HeartDisease:
     def predictModel(self):
         """[to predict the model]
         """
-        predict = Predict()
-        predict.predictModel()
+        predictor.Predict()
 
 
 if __name__ == '__main__':
