@@ -1,7 +1,7 @@
 import configparser
 import os
 import pickle
-
+from src.shared.constants import CONFIG_PATH
 from sklearn.svm import SVC
 
 
@@ -11,8 +11,9 @@ class SupportVectorMachineModel:
         """[summary]
         """
         config = configparser.ConfigParser()
-        config.read(os.getcwd() + '/tox.ini')
-        self.save_path = config['data']['save-model'] + \
+        config.read(os.getcwd() + CONFIG_PATH, encoding="utf-8")
+        #config.read(CONFIG_PATH, encoding="utf-8")
+        self.save_path = os.getcwd() +config['data']['save-model'] + \
             'SupportVectorMachine.pkl'
 
     def build(self, data):

@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import os
 from sklearn.impute import SimpleImputer
 from src.shared.config import loadConfig
 
@@ -23,8 +24,9 @@ def make_datasets(mode):
         cleaned data ready to be analyzed (saved in ../processed).
     """
     config = loadConfig()
-    #config['data'][mode]
-    df = pd.read_csv(config['data'][mode])
+    path = os.getcwd() + config['data'][mode]
+    print("printinggggg...." +path)
+    df = pd.read_csv(path)
     cols = df.columns
     num_cols = df._get_numeric_data().columns
     nonNumeric = list(set(cols) - set(num_cols))
