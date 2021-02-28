@@ -1,16 +1,7 @@
-# local package
-# -e .
-
-# external requirements
 pandas
+matplotlib
 streamlit
-streamlit_pandas_profiling
-pandas
+# streamlit_pandas_profiling
 numpy
 scikit-learn
 fire
-# click
-# Sphinx
-# coverage
-# awscli
-# flake8
