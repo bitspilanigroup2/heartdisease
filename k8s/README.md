@@ -1,4 +1,4 @@
-## Godaddy
+## GoDaddy
   https://account.godaddy.com/
   https://dcc.godaddy.com/manage/nithin.net.in/dns
 
@@ -16,7 +16,7 @@
     Domain Name
         auth.platform.nithin.net.in
 
-## Usage - https://www.kubeflow.org/docs/aws/deploy/install-kubeflow/
+## Reference - https://www.kubeflow.org/docs/aws/deploy/install-kubeflow/
 
   # 1. Create EKS Cluster
       eksctl create cluster -f cluster.yaml
