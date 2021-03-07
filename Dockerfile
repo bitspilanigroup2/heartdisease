@@ -25,13 +25,13 @@ CMD streamlit run main.py predictModel
 # example - sudo docker build -t heartdisease:latest .
 
 # 1. To build the docker image
-# docker build -t heartdisease:latest .
+# sudo docker build -t heartdisease:latest .
 
 # 3. To list docker images
-# docker images
+# sudo docker images
 
 # 3. To run the prediction app from docker image
-# docker run -p 8501:8501 heartdisease:latest
+# sudo docker run -p 8501:8501 heartdisease:latest
 
 # Trouble Shooting dokcer
     # to list the container
