@@ -21,26 +21,32 @@ EXPOSE 8501
 CMD streamlit run main.py predictModel
 
 # Steps - execute the following to containerize the model
+# If you are getting permission error while executing docker, just add sudo
+# example - sudo docker build -t heartdisease:latest .
 
-# To build the docker image
+# 1. To build the docker image
 # docker build -t heartdisease:latest .
 
-# to list the container
-# docker container ls
+# 3. To list docker images
+# docker images
 
-# stop the existing heart disease container
-# docker stop aceb2e971885
-# docker rm -f aceb2e971885
-
-# To run the prediction app from docker image
+# 3. To run the prediction app from docker image
 # docker run -p 8501:8501 heartdisease:latest
 
-# To debug the docker image - optional
-# docker run -it heartdisease bash
+# Trouble Shooting dokcer
+    # to list the container
+    # docker container ls
 
-# To delete all containers including its volumes and images
-# docker system prune -a
-# docker rm -vf $(docker ps -a -q)
-# docker rmi -f $(docker images -a -q)
+    # stop the existing heart disease container
+    # docker stop aceb2e971885
+    # docker rm -f aceb2e971885
 
 
+    # To debug the docker image - optional
+    # docker run -it heartdisease bash
+
+    # To delete all containers including its volumes and images
+    # docker system prune -a
+    # docker rm -vf $(docker ps -a -q)
+    # docker rmi -f $(docker images -a -q)
+    
