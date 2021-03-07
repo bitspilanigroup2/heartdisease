@@ -4,17 +4,17 @@
 
 
 ## Delete kubeconfig
-  kubectl config delete-cluster aiplatform.us-east-1.eksctl.io
-  kubectl config delete-context nithin@aiplatform.us-east-1.eksctl.io
-  kubectl config unset users.nithin@aiplatform.us-east-1.eksctl.io
-  kubectl config unset current-contexts.nithin@aiplatform.us-east-1.eksctl.io
-  kubectl config unset current-context
+    kubectl config delete-cluster aiplatform.us-east-1.eksctl.io
+    kubectl config delete-context nithin@aiplatform.us-east-1.eksctl.io
+    kubectl config unset users.nithin@aiplatform.us-east-1.eksctl.io
+    kubectl config unset current-contexts.nithin@aiplatform.us-east-1.eksctl.io
+    kubectl config unset current-context
 
 ## Entries
-  Callback URL(s)
-    https://kubeflow.bitspilanigroup2.com/oauth2/idpresponse
-  Domain Name
-    auth.platform.nithin.net.in
+    Callback URL(s)
+        https://kubeflow.bitspilanigroup2.com/oauth2/idpresponse
+    Domain Name
+        auth.platform.nithin.net.in
 
 ## Usage - https://www.kubeflow.org/docs/aws/deploy/install-kubeflow/
 
@@ -70,10 +70,10 @@
 
 
 ## EKS Ingress Sample
-  kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/2048/2048-namespace.yaml
-  kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/2048/2048-deployment.yaml
-  kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/2048/2048-service.yaml
-  kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/2048/2048-ingress.yaml
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/2048/2048-namespace.yaml
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/2048/2048-deployment.yaml
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/2048/2048-service.yaml
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/2048/2048-ingress.yaml
 
 
 ## Home Page
