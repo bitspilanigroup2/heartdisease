@@ -1,0 +1,10 @@
+numpy
+pandas
+seaborn
+sklearn
+dython
+imblearn
+tensorflow==2.2.0
+Keras
+fsspec
+s3fs

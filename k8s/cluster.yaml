@@ -8,6 +8,6 @@ metadata:
 nodeGroups:
   - name: ng
     desiredCapacity: 4
-    instanceType: m5.xlarge
-    availabilityZones:
-      - us-east-1a
+    instanceType: m5.large
+    # availabilityZones: ['us-east-1a', 'us-east-1b', 'us-east-1c', 'us-east-1d']
+      # - us-east-1a

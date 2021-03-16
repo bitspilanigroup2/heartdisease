@@ -12,7 +12,7 @@
 
 ## Entries
     Callback URL(s)
-        https://kubeflow.bitspilanigroup2.com/oauth2/idpresponse
+        https://kubeflow.platform.nithin.net.in/oauth2/idpresponse
     Domain Name
         auth.platform.nithin.net.in
 
@@ -42,10 +42,15 @@
       kubectl -n kubeflow get all
       kubectl get ingress -n istio-system
 
-  # 6. Delete kubeflow
+  # 6. Home Page
+      https://kubeflow.platform.nithin.net.in
+
+
+
+  # 7. Delete kubeflow
       kfctl delete -V -f kfctl_aws.yaml
 
-  # 7. Delete EKS
+  # 8. Delete EKS
       eksctl delete cluster --name aiplatform
 
   
@@ -54,7 +59,8 @@
   
   https://www.kubeflow.org/docs/aws/troubleshooting-aws/
 
-  kubectl get configmaps aws-alb-ingress-controller-config -n kubeflow -o yaml > ex-config.yaml
+  kubectl get configmaps aws-alb-ingress-controller-config -n kubeflow -o yaml
+  kubeflow -o yaml > ex-config.yaml
   kubectl replace -f ex-config.yaml
 
   kubectl -n kubeflow get all
@@ -76,6 +82,4 @@
     kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/2048/2048-ingress.yaml
 
 
-## Home Page
-  https://kubeflow.platform.nithin.net.in
   
