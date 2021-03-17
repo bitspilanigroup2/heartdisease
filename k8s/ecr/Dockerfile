@@ -4,7 +4,7 @@ COPY requirements.txt /tmp
 
 USER root
 
-RUN pip3 install --upgrade pip
+# RUN pip3 install --upgrade pip
 
 RUN pip3 install -r /tmp/requirements.txt
 

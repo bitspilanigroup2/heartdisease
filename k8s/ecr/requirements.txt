@@ -4,7 +4,12 @@ seaborn
 sklearn
 dython
 imblearn
-tensorflow==2.2.0
-Keras
+tensorflow==2.1.0
+# Keras
 fsspec
 s3fs
+kubeflow-fairing==1.0.1
+
+
+
+#https://console.cloud.google.com/gcr/images/kubeflow-images-public/GLOBAL
