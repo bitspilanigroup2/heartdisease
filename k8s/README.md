@@ -83,8 +83,8 @@
 
 
   ## Namespaces
-      azprojectnlp
+      azprojectnlp - azprojectnlp@gmail.com
         dan
         anshul
-      azprojectaida
+      azprojectaida - azprojectaida@gmail.com
         aidauser1
