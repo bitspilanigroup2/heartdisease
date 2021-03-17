@@ -82,6 +82,9 @@
     kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.1.4/docs/examples/2048/2048-ingress.yaml
 
 
-  ## Users
+  ## Namespaces
       azprojectnlp
+        dan
+        anshul
       azprojectaida
+        aidauser1
