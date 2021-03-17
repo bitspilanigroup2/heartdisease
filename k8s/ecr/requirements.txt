@@ -9,6 +9,8 @@ tensorflow==2.1.0
 fsspec
 s3fs
 kubeflow-fairing==1.0.1
+kubeflow-metadata
+mlflow
 
 
 

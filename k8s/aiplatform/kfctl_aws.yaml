@@ -100,15 +100,19 @@ spec:
     spec:
       auth:
         cognito:
-          certArn: arn:aws:acm:us-east-1::certificate/
-          cognitoAppClientId: 2sjcaias8l7rk493itpml0n9cj
-          cognitoUserPoolArn: arn:aws:cognito-idp:us-east-1::userpool/
+          certArn: arn:aws:acm:us-east-1:307915334735:certificate/7aa139f4-005c-40ee-9ef4-a01f67f00a15
+          cognitoAppClientId: 4cvffm35u0kj5dim8ljtbhma9l
+          cognitoUserPoolArn: arn:aws:cognito-idp:us-east-1:307915334735:userpool/us-east-1_pKqKjheU3
           cognitoUserPoolDomain: auth.platform.nithin.net.in
       region: us-east-1
       roles:
       - eksctl-aiplatform-nodegroup-ng-NodeInstanceRole-1LL1T2LY5BOP5
       - eksctl-aiplatform-nodegroup-ng-NodeInstanceRole-1WPYYOEJKTPVO
       - eksctl-aiplatform-nodegroup-ng-NodeInstanceRole-2L6ZAWXN1Y0M
+      - eksctl-aiplatform-nodegroup-ng-NodeInstanceRole-8OFAMTZDY5JA
+      - eksctl-aiplatform-nodegroup-ng-NodeInstanceRole-P5YJSW8DG8DH
+      - eksctl-aiplatform-nodegroup-ng-NodeInstanceRole-QYB6L47RAEZK
+      - eksctl-aiplatform-nodegroup-ng-NodeInstanceRole-UDE3IS38CUDU
   repos:
   - name: manifests
     uri: https://github.com/kubeflow/manifests/archive/v1.2.0.tar.gz

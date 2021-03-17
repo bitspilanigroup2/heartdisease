@@ -8,6 +8,10 @@ USER root
 
 RUN pip3 install -r /tmp/requirements.txt
 
+RUN pip uninstall -y enum34
+
+RUN pip3 install kfp --upgrade
+
 USER ${NB_USER}
     
 ENV NB_PREFIX /
