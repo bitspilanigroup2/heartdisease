@@ -1,0 +1,5 @@
+
+tensorflow
+tensorflow-datasets==2.1.0
+kubeflow-fairing==1.0.1
+google-cloud-storage==1.26.0
